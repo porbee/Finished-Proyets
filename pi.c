@@ -1,3 +1,10 @@
+/*    pi.c
+
+for reference:
+                https://www.cecm.sfu.ca/organics/papers/borwein/paper/html/local/billdigits.html
+                https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80
+*/
+
 #include <stdio.h>
 #include <math.h> // for pow()
 #include <time.h> // for time measuring in first loop
@@ -8,8 +15,8 @@
 #define PI_ARRAY_SIZE 4294
 #define TAB "  "
 #define OPTSTR "vphd:t:"
-#define VERSION_STR "\n%s 1.0\n\nWritten by porbee; @porbee on Github ©\nEscrito por porbee; @porbee en Github ©\n\n<%s>\n"
-#define GITHUB_REPO_LINK ""
+#define VERSION_STR "\n%s 1.0\n\nWritten by porbee; @porbee on Github ©\nEscrito por porbee; @porbee en Github ©\n\n«%s»\n"
+#define GITHUB_REPO_LINK "https://github.com/porbee/Finished-Proyets.git"
 
 extern char *optarg;
 
@@ -92,12 +99,3 @@ int main(int argc, char * const argv[])
     }
     return 0;
 }
-
-/*
-gcc -lm -Wall -c pi.c && gcc pi.o -lm -Wall -o PI
-./PI -t 4 -d 521 && rm PI && rm pi.o
-
-for reference:
-                https://www.cecm.sfu.ca/organics/papers/borwein/paper/html/local/billdigits.html
-                https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80
-*/
